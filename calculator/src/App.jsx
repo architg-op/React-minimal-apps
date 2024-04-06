@@ -5,10 +5,10 @@ import ButtonLayout from './components/ButtonLayout';
 
 function App() {
   return (
-    <>
+    <center>
       <DisplayArea />
       <ButtonLayout />
-    </>
+    </center>
   );
 }
 

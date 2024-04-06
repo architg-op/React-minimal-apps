@@ -1,60 +1,28 @@
 import Button from './Button';
+import styles from './ButtonLayout.module.css';
 
 const ButtonLayout = () => {
-  let row1 = ['C', '1', '2'];
-  let row2 = ['+', '3', '4'];
-  let row3 = ['-', '5', '6'];
-  let row4 = ['*', '7', '8'];
-  let row5 = ['/', '=', '9'];
-  let row6 = ['0', '.'];
+  let rows = [
+    ['C', '1', '2'],
+    ['+', '3', '4'],
+    ['-', '5', '6'],
+    ['*', '7', '8'],
+    ['/', '9', '0'],
+    ['0', '.'],
+  ];
 
   return (
-    <>
-      <div class="container text-center">
+    <div class="container text-center">
+      {rows.map((row) => (
         <div class="row">
-          {row1.map((item) => (
-            <div class="col">
+          {row.map((item) => (
+            <div class="col-1">
               <Button text={item} />
             </div>
           ))}
         </div>
-        <div class="row">
-          {row2.map((item) => (
-            <div class="col">
-              <Button text={item} />
-            </div>
-          ))}
-        </div>{' '}
-        <div class="row">
-          {row3.map((item) => (
-            <div class="col">
-              <Button text={item} />
-            </div>
-          ))}
-        </div>{' '}
-        <div class="row">
-          {row4.map((item) => (
-            <div class="col">
-              <Button text={item} />
-            </div>
-          ))}
-        </div>{' '}
-        <div class="row">
-          {row5.map((item) => (
-            <div class="col">
-              <Button text={item} />
-            </div>
-          ))}
-        </div>{' '}
-        <div class="row">
-          {row6.map((item) => (
-            <div class="col">
-              <Button text={item} />
-            </div>
-          ))}
-        </div>
-      </div>
-    </>
+      ))}
+    </div>
   );
 };
 
