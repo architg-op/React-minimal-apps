@@ -12,11 +12,11 @@ const ButtonLayout = () => {
   ];
 
   return (
-    <div class="container text-center">
+    <div className={styles.buttonsDisplay}>
       {rows.map((row) => (
-        <div class="row">
+        <div className="row">
           {row.map((item) => (
-            <div class="col-1">
+            <div className="col-1">
               <Button text={item} />
             </div>
           ))}
